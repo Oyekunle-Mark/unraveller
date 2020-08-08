@@ -29,6 +29,7 @@ function App() {
         onChange={(e) => setInputStr(e.target.value)}
       ></textarea>
 
+      <br />
       <button onClick={encryptInput}>Encrypt</button>
       <button onClick={decryptInput}>Decrypt</button>
 
