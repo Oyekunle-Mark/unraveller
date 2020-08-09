@@ -8,14 +8,22 @@ function App() {
   const [inputStr, setInputStr] = useState('');
   const [result, setResult] = useState('');
 
-  const encryptInput = (str) => {
-    const encryptedStr = encryptObject(JSON.parse(inputStr), key);
-    setResult(encryptedStr);
+  const encryptInput = () => {
+    try {
+      const encryptedStr = encryptObject(JSON.parse(inputStr), key);
+      setResult(encryptedStr);
+    } catch (err) {
+      window.alert('Invalid input. Cannot parse input!');
+    }
   };
 
-  const decryptInput = (str) => {
-    const decryptedStr = decryptObject(inputStr, key);
-    setResult(decryptedStr);
+  const decryptInput = () => {
+    try {
+      const decryptedStr = decryptObject(inputStr, key);
+      setResult(decryptedStr);
+    } catch (err) {
+      window.alert('Invalid key provided.');
+    }
   };
 
   return (
