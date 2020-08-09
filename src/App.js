@@ -22,7 +22,7 @@ function App() {
       const decryptedStr = decryptObject(inputStr, key);
       setResult(decryptedStr);
     } catch (err) {
-      window.alert('Invalid key provided.');
+      window.alert('Invalid key or input provided.');
     }
   };
 
